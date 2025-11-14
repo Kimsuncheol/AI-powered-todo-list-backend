@@ -9,3 +9,5 @@ PyJWT[crypto]==2.8.0
 fastapi-mail==1.4.1
 pydantic[email]==2.6.4
 python-dotenv==1.0.1
+langchain-core==0.2.3
+langchain-openai==0.1.7

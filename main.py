@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import auth as auth_routes
+from app.api.routes import motivation as motivation_routes
 from app.core.config import settings
 from app.core.db import Base, engine
 from app.utils.middleware import CSRFMiddleware, EnforceHTTPSMiddleware
@@ -36,6 +37,7 @@ def create_app() -> FastAPI:
     )
 
     app.include_router(auth_routes.router)
+    app.include_router(motivation_routes.router)
 
     @app.on_event("startup")
     async def on_startup():
